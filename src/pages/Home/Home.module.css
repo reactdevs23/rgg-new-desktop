@@ -1,5 +1,14 @@
 .wrapper {
-  background: url(../../images/bg.svg);
+  background:
+    url("../../images/bg.svg"),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(0, 180, 255, 0.25),
+      transparent 40%
+    ),
+    radial-gradient(circle at 85% 15%, rgba(0, 180, 255, 0.2), transparent 40%),
+    linear-gradient(180deg, #02111f, #020d18 80%);
+
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
