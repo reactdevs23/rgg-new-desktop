@@ -1,0 +1,91 @@
+/* root background */
+.techBg {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(0, 180, 255, 0.25),
+      transparent 40%
+    ),
+    radial-gradient(circle at 85% 15%, rgba(0, 180, 255, 0.2), transparent 40%),
+    linear-gradient(180deg, #02111f, #020d18 80%);
+  z-index: 1;
+}
+
+/* subtle glowing fog */
+.techBg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(0, 150, 255, 0.15), transparent 60%);
+  filter: blur(60px);
+  z-index: -1;
+}
+
+/* container for lines */
+.techLines {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+/* base line style */
+.line {
+  position: absolute;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00cfff, transparent);
+  box-shadow:
+    0 0 6px #00cfff,
+    0 0 12px #00cfff,
+    0 0 20px rgba(0, 200, 255, 0.5);
+  opacity: 0.8;
+  animation: moveGlow 6s infinite ease-in-out;
+}
+
+/* individual line placements */
+.l1 {
+  width: 220px;
+  bottom: 25%;
+  left: 5%;
+  transform: rotate(8deg);
+}
+
+.l2 {
+  width: 160px;
+  bottom: 30%;
+  left: 12%;
+  transform: rotate(8deg);
+}
+
+.l3 {
+  width: 220px;
+  top: 18%;
+  right: 6%;
+  transform: rotate(-10deg);
+}
+
+.l4 {
+  width: 140px;
+  top: 24%;
+  right: 12%;
+  transform: rotate(-10deg);
+}
+
+/* glow animation */
+@keyframes moveGlow {
+  0% {
+    opacity: 0.3;
+    transform: translateX(0) scaleX(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(20px) scaleX(1.1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateX(0) scaleX(1);
+  }
+}

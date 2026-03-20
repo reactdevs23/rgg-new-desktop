@@ -1,0 +1,184 @@
+.errorFallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.errorContainer {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.errorTitle {
+  color: #e53e3e;
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.errorTitle::before {
+  content: '⚠️';
+  font-size: 32px;
+}
+
+.errorMessage {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.errorMessage h3 {
+  color: #2d3748;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+}
+
+.errorText {
+  background: #fed7d7;
+  border: 1px solid #feb2b2;
+  border-radius: 8px;
+  padding: 16px;
+  color: #c53030;
+  font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 14px;
+  margin: 0;
+  word-break: break-word;
+}
+
+.errorDetails {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.errorSummary {
+  background: #f7fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #4a5568;
+  transition: background-color 0.2s;
+}
+
+.errorSummary:hover {
+  background: #edf2f7;
+}
+
+.errorStack {
+  background: #1a202c;
+  color: #e2e8f0;
+  border-radius: 6px;
+  padding: 16px;
+  margin: 12px 0 0 0;
+  font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 12px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.errorActions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 480px) {
+  .errorActions {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.retryButton {
+  background: #48bb78;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  flex: 1;
+  max-width: 150px;
+}
+
+.retryButton:hover {
+  background: #38a169;
+}
+
+.copyButton,
+.reloadButton {
+  background: transparent;
+  border: 2px solid #4299e1;
+  color: #4299e1;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+  max-width: 150px;
+}
+
+.copyButton:hover,
+.reloadButton:hover {
+  background: #4299e1;
+  color: white;
+}
+
+.errorHelp {
+  background: #f0f4f8;
+  border-radius: 8px;
+  padding: 16px;
+  color: #4a5568;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.errorHelp p {
+  margin: 0;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .errorFallback {
+    padding: 16px;
+  }
+  
+  .errorContainer {
+    padding: 24px 20px;
+  }
+  
+  .errorTitle {
+    font-size: 24px;
+  }
+  
+  .errorActions {
+    gap: 8px;
+  }
+  
+  .retryButton,
+  .copyButton,
+  .reloadButton {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,215 @@
+.modalContainer {
+  position: fixed;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  width: 100%;
+  max-width: 400px;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  animation: slideDown 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translate(-50%, -40px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.wrapper {
+  border-radius: 12px;
+  background: var(--Primitive-900);
+  border: 1px solid var(--Green-10);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  pointer-events: auto;
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 8px 0;
+}
+
+.closeButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--Primitive-400);
+  transition: all 0.2s ease;
+  z-index: 1;
+  font-size: 1.2rem;
+}
+.closeButton:hover {
+  background: var(--Primitive-800);
+  color: var(--Primitive-200);
+}
+
+.iconTop {
+  margin: 18px auto 6px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 82, 82, 0.10);
+}
+
+.title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--Green);
+  margin: 0 0 2px 0;
+  text-align: center;
+}
+
+.message {
+  font-size: 0.98rem;
+  color: var(--Red, #ff5252);
+  font-weight: 500;
+  margin: 0 0 2px 0;
+  text-align: center;
+}
+
+.actionRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0 0 0;
+  width: 100%;
+  padding: 0 18px;
+}
+
+.expandBtn, .copyBtn, .aiBtn {
+  background: var(--Green-10);
+  color: var(--Green);
+  border: none;
+  border-radius: 4px;
+  padding: 0.18rem 0.45rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  outline: none;
+  transition: background 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  min-width: 0;
+  height: 28px;
+  line-height: 1.1;
+}
+.expandBtn svg, .copyBtn svg, .aiBtn svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 2px;
+}
+.expandBtn:hover, .copyBtn:hover, .aiBtn:hover {
+  background: var(--Green);
+  color: var(--Primitive-900);
+}
+.copyBtn[disabled], .aiBtn[disabled] {
+  background: var(--Primitive-800);
+  color: var(--Primitive-400);
+  cursor: not-allowed;
+}
+
+.logs {
+  background: var(--Primitive-800);
+  color: var(--Primitive-100);
+  font-size: 0.93rem;
+  padding: 0.7rem;
+  border-radius: 6px;
+  max-height: 100px;
+  overflow-y: auto;
+  margin: 0.3rem 0 0.2rem 0;
+  white-space: pre-wrap;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.explanation {
+  background: var(--Primitive-800);
+  border-left: 4px solid var(--Green);
+  padding: 0.5rem 0.8rem;
+  margin: 8px 0 0 0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: var(--Primitive-100);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aiLoading {
+  display: inline-block;
+  margin-left: 0.5rem;
+  width: 1.1em;
+  height: 1.1em;
+  border: 2.5px solid var(--Green);
+  border-top: 2.5px solid var(--Primitive-900);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  vertical-align: middle;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.errorIconLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 400px) {
+  .wrapper, .modalContainer {
+    max-width: 98vw;
+  }
+  .actionRow {
+    padding: 0 4px;
+    gap: 2px;
+  }
+  .logs, .explanation {
+    width: 98%;
+  }
+}
+
+.rowCenter, .rowLeft {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 28px;
+}
+.rowCenter {
+  justify-content: center;
+  margin: 10px 0 2px 0;
+}
+.rowLeft {
+  justify-content: flex-start;
+  margin: 10px 0 2px 0;
+} 

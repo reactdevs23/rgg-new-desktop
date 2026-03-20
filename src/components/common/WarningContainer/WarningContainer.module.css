@@ -1,0 +1,26 @@
+.wrapper {
+  border-radius: 8px;
+  border: 1px solid var(--Orange-20);
+  background: var(--Orange-10);
+  padding: 10px;
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.type2 {
+  border: 1px solid var(--Green-20);
+  background: var(--Green-10);
+}
+.img {
+  max-width: 20px;
+  width: 100%;
+  flex-shrink: 0;
+}
+.icon {
+  flex-shrink: 0;
+  color: var(--Orange);
+  font-size: 20px;
+}
+.type2 .icon {
+  color: var(--Blue-500);
+}

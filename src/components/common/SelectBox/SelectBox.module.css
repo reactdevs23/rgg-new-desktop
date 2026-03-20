@@ -1,0 +1,86 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  width: 100%;
+
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.wrapper:hover {
+  transform: none;
+  opacity: 0.9;
+}
+
+.wrapper.unselected:hover::before {
+  left: 100%;
+}
+
+.selectedItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  flex-shrink: 0;
+  border-radius: 8px;
+
+  transition: all 0.2s ease;
+}
+
+.logo {
+  max-width: 18px;
+  width: 100%;
+  flex-shrink: 0;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.walletIcon {
+  color: var(--Primitive-600);
+  font-size: 18px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.wrapper.unselected:hover .walletIcon {
+  color: var(--Blue-500);
+  transform: scale(1.1);
+}
+
+.itemText {
+  transition: all 0.2s ease;
+}
+
+.placeholderText {
+  font-style: italic;
+}
+
+.wrapper.unselected:hover .placeholderText {
+  color: var(--Blue-500);
+}
+
+.icon {
+  color: var(--Primitive-500);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.icon:hover {
+  transform: rotate(-180deg);
+}
+
+.iconUnselected {
+  color: var(--Primitive-600);
+  font-size: 12px;
+}
+
+.wrapper.unselected:hover .iconUnselected {
+  color: var(--Blue-500);
+  transform: scale(1.1);
+}

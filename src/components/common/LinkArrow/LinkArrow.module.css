@@ -1,0 +1,14 @@
+.arrowContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1/1;
+  width: 24px;
+  border-radius: 50%;
+  background: var(--Blue-10);
+}
+.arrow {
+  font-size: 14px;
+
+  color: var(--Blue-500);
+}

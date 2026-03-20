@@ -1,0 +1,166 @@
+.button {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  color: var(--White-95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 13.667px 23.667px;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: 0.3s;
+  width: max-content;
+  border-radius: 12px;
+  border: 1px solid var(--Border-Color);
+  background: var(
+    --HeaderColor,
+    radial-gradient(
+      83.89% 86.45% at 26.68% 78.47%,
+      rgba(80, 87, 103, 0.4) 0%,
+      rgba(39, 35, 31, 0.4) 98.45%
+    )
+  );
+}
+.button:hover {
+  transform: translateY(-3px);
+  border: 1px solid var(--Orange);
+}
+.bottomPad {
+  margin-bottom: 60px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+}
+.semiBold {
+  font-weight: 600;
+}
+
+.radius {
+  border-radius: 12px;
+}
+.xs {
+  padding: 2px 8px;
+  font-size: 12px;
+  line-height: 133.33%;
+  border-radius: 5px;
+}
+
+.lxs {
+  font-size: 13px;
+  line-height: 123.077%;
+  padding: 4px 10px;
+}
+.lsm {
+  padding: 8px 12px;
+  font-size: 15px;
+  line-height: 160%;
+}
+.sm {
+  padding: 9px 16px;
+  font-size: 15px;
+  line-height: 160%;
+}
+
+.lg {
+  font-size: 18px;
+  padding: 10px 22px;
+}
+
+.blue10 {
+  background: var(--Blue-10);
+  color: var(--Blue-500);
+}
+.red10 {
+  background: var(--Red-10);
+  color: var(--Red);
+}
+.green10 {
+  background: var(--Green-10);
+  color: var(--Green);
+}
+.green {
+  color: var(--Primitive-0);
+  background: #1cad7f;
+}
+.red {
+  color: var(--Primitive-0);
+  background: var(--Red);
+}
+/* .btnPrimary {
+  border-bottom: 2px solid var(--Blue-600);
+} */
+
+.transparent {
+  padding: 12px 22px;
+  background: transparent;
+  color: var(--Blue-500);
+  border: transparent;
+}
+.arrowButton {
+  border: none;
+  padding: 0;
+  color: var(--Blue-500);
+  background: transparent;
+  gap: 6px;
+}
+.primitive700 {
+  background: var(--Primitive-700);
+  color: var(--Primitive-300);
+}
+.primitive800 {
+  background: var(--Primitive-800);
+  color: var(--Primitive-300);
+}
+.primitive900 {
+  background: var(--Primitive-900);
+  color: var(--Primitive-400);
+}
+.primitiveTransparent8 {
+  background: var(--Primitive-Transparent-8);
+  color: var(--Primitive-Default);
+}
+.wFull {
+  width: 100%;
+}
+.spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+  margin-right: 5px; /* Add some space between the spinner and the text */
+}
+.arrowButton {
+  border: none;
+  padding: 0;
+  color: var(--Blue-500);
+  background: transparent;
+  gap: 6px;
+}
+.loading {
+  gap: 8px;
+  opacity: 0.6;
+}
+.mxAuto {
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 520px) {
+  .button {
+    padding: 11px 20px;
+    font-size: 14px;
+  }
+}

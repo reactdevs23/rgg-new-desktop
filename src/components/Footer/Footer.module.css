@@ -1,0 +1,175 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 100px 0;
+}
+
+.logo {
+  max-width: 53px;
+  width: 100%;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 20px 40px;
+  flex-wrap: wrap;
+}
+.navItem {
+  color: var(--Primitive-0);
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.active {
+  color: var(--Orange);
+}
+.socialInfo {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  gap: 18px;
+}
+.socialContainer {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.socialIcon {
+  font-size: 28px;
+  color: #fae5e5;
+}
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.downloadButton {
+  font-size: 16px;
+  color: var(--Primitive-0);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 8px;
+  white-space: nowrap;
+  margin-right: 8px;
+}
+.downloadIcon {
+  font-size: 20px;
+}
+.appleIcon,
+.googleIcon {
+  font-size: 14px;
+  color: var(--Blue-7);
+}
+.appleIcon {
+  font-size: 16px;
+}
+.button {
+  font-size: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 8px;
+  border-radius: 25px;
+  background: var(--Primitive-0);
+  backdrop-filter: blur(22.75px);
+  width: 148px;
+
+  white-space: nowrap;
+}
+.info {
+  line-height: 140%;
+  padding-top: 24px;
+}
+.policyAndTerms {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.policyAndCopyRight {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.policyText,
+.copyRightText {
+  color: #faf8f8;
+  font-weight: 400;
+}
+.policyText {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 991px) {
+  .socialInfo {
+    flex-direction: column;
+    padding-top: 24px;
+  }
+
+  .buttonContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .footer {
+    gap: 48px;
+    padding: 72px 0;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .navItems {
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    max-width: 42px;
+  }
+  .policyAndCopyRight {
+    flex-direction: column;
+  }
+  .policyAndTerms {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .footer {
+    padding-bottom: 50px;
+  }
+  .buttonContainer {
+    flex-direction: column;
+  }
+  .info,
+  .socialInfo {
+    padding-top: 0px;
+  }
+  .downloadButton {
+    margin: 0;
+    padding: 0;
+  }
+  .button {
+    width: 200px;
+  }
+}

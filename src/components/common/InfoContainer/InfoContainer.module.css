@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  max-width: 260px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 32px;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.img {
+  max-width: 60px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+}
