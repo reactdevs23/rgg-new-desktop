@@ -4,6 +4,8 @@ import clsx from "clsx";
 import { Button, Heading, Text } from "@/components/common";
 import { logo } from "@/images";
 import WorkWith from "../WorkWith/WorkWith";
+import { headerVideo } from "@/videos";
+import ReactScrollLink from "@/components/common/ReactScrollLink/ReactScrollLink";
 const partners = [
   "Crypto Projects",
   "Exchanges",
@@ -17,6 +19,9 @@ const partners = [
 const HeroSection: React.FC = () => {
   return (
     <div className={classes.wrapper} id="#hero">
+      <video className={classes.video} autoPlay muted loop playsInline>
+        <source src={headerVideo} type="video/mp4" />
+      </video>
       <div className={clsx(classes.container, "container")}>
         <div className={classes.infoContainer}>
           <Heading xl5 className={classes.heading}>
@@ -29,7 +34,10 @@ const HeroSection: React.FC = () => {
           </Text>
           <div className={classes.buttonContainer}>
             <Button>Book a Demo</Button>
-            <Button>Explore products</Button>
+
+            <ReactScrollLink to="ecosystem" offset={0}>
+              <Button>Explore products</Button>
+            </ReactScrollLink>
           </div>
         </div>
         <div className={classes.logoContainer}>

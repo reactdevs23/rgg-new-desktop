@@ -1,0 +1,127 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 420px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.card {
+  position: absolute;
+  width: 100%;
+  max-width: 200px;
+
+  border-radius: 16px;
+
+  transition: all 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/*
+   INITIAL STATE
+   */
+
+.card:nth-child(4) {
+  transform: translateY(0%) scale(1);
+  filter: blur(0);
+  opacity: 1;
+  z-index: 5;
+}
+
+/* 🔵 LEFT (hidden, bigger) */
+.card:nth-child(1) {
+  transform: translate(-1%, -5%) scale(1.1);
+
+  filter: brightness(0.25) blur(1px);
+  z-index: 3;
+}
+
+/* 🟣 RIGHT (hidden, bigger) */
+.card:nth-child(2) {
+  transform: translate(0%, 0%) scale(1);
+
+  filter: brightness(0.2);
+  z-index: 2;
+}
+
+/* 🔺 TOP (hidden, biggest) */
+.card:nth-child(3) {
+  transform: translateY(0%) scale(1);
+
+  filter: brightness(0.2);
+  z-index: 1;
+}
+
+/* =========================
+   HOVER (REVEAL)
+   ========================= */
+
+.wrapper:hover .card {
+  filter: blur(0);
+  opacity: 1;
+}
+
+/* LEFT */
+.wrapper:hover .card:nth-child(1) {
+  transform: translateX(-80%) scale(1);
+}
+
+/* RIGHT */
+.wrapper:hover .card:nth-child(2) {
+  transform: translateX(80%) scale(1);
+}
+
+/* TOP */
+.wrapper:hover .card:nth-child(3) {
+  transform: translateY(-10%) scale(1);
+}
+
+/* BOTTOM */
+.wrapper:hover .card:nth-child(4) {
+  transform: translateY(40%) scale(1);
+}
+
+/* =========================
+   IMAGE
+   ========================= */
+
+.card img {
+  width: 100%;
+  height: 100%;
+} /* LEFT */
+.wrapper:hover .card:nth-child(1) {
+  transform: translateX(-80%) scale(1);
+}
+
+/* RIGHT */
+.wrapper:hover .card:nth-child(2) {
+  transform: translateX(80%) scale(1);
+}
+
+/* TOP */
+.wrapper:hover .card:nth-child(3) {
+  transform: translateY(-30%) scale(1);
+}
+
+/* BOTTOM */
+.wrapper:hover .card:nth-child(4) {
+  transform: translateY(15%) scale(1);
+}
+
+@media only screen and (max-width: 767px) {
+  .card {
+    max-width: 190px;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .card {
+    max-width: 150px;
+  }
+  .wrapper:hover .card {
+    filter: blur(0);
+    opacity: 1;
+  }
+}

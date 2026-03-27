@@ -1,19 +1,18 @@
 .wrapper {
-  background: var(--Primitive-900);
-  padding: 12px 16px;
-  border-radius: 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4px 12px;
-  width: 100%;
-}
-.wrapper:hover {
-  transform: translateY(0px);
-  opacity: 0.7;
-}
-.icon {
-  color: var(--Primitive-600);
-  font-size: 20;
-  cursor: pointer;
+  border-radius: 20px;
+  border: 1px solid var(--Radial, #04111e);
+  border-left: 1px solid rgba(0, 255, 255, 0.05);
+  border-right: 1px solid rgba(0, 255, 255, 0.05);
+  background: radial-gradient(
+    120% 100% at 50% 0%,
+    rgba(10, 40, 90, 0.6) 0%,
+    rgba(5, 25, 60, 0.5) 30%,
+    rgba(5, 20, 50, 0.35) 70%,
+    rgba(5, 16, 32, 0.2) 100%
+  );
+
+  background-blend-mode: plus-lighter;
+  box-shadow: 4px 14px 16.2px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(1px);
+  padding: 20px;
 }

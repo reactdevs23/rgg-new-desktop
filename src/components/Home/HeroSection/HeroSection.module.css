@@ -1,8 +1,25 @@
+.wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
 .container {
   display: grid;
   grid-template-columns: auto 1fr;
 
-  padding-top: 260px;
+  padding-top: 170px;
+  padding-bottom: 100px;
 }
 
 .infoContainer {
@@ -22,6 +39,7 @@
 .logoContainer {
   display: flex;
   justify-content: center;
+  display: none;
 }
 .logo {
   max-width: 300px;
@@ -37,7 +55,26 @@
   gap: 16px;
   padding-top: 8px;
 }
+/* @media only screen and (min-width: 1921px) {
+  .video {
+    display: none;
+  }
+  .logoContainer {
+    display: block;
+  }
+} */
+@media only screen and (max-width: 1440px) {
+  .container {
+    padding-top: 120px;
+  }
+}
 @media only screen and (max-width: 1199px) {
+  .video {
+    display: none;
+  }
+  .logoContainer {
+    display: block;
+  }
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -46,9 +83,10 @@
   }
   .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 48px;
-    padding-top: 200px;
+    padding-top: 60px;
+    padding-bottom: 50px;
   }
   .infoContainer {
     align-items: center;
@@ -64,9 +102,6 @@
   }
 }
 @media only screen and (max-width: 991px) {
-  .container {
-    padding-top: 180px;
-  }
   .logo {
     max-width: 220px;
   }
@@ -75,18 +110,19 @@
   }
 }
 @media only screen and (max-width: 767px) {
+  .wrapper {
+    gap: 0px;
+  }
   .container {
-    padding-top: 160px;
+    gap: 32px;
+    padding-top: 48px;
   }
   .heading {
     font-size: 36px;
   }
 }
 @media only screen and (max-width: 520px) {
-  .container {
-    padding-top: 120px;
-  }
   .logo {
-    max-width: 180px;
+    max-width: 150px;
   }
 }

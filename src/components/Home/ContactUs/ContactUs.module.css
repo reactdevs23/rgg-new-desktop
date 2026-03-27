@@ -88,6 +88,13 @@
   display: block;
   margin: 0 auto;
 }
+.form .sendButton {
+  max-width: 139px;
+  width: 100%;
+  border-radius: 8px;
+  padding: 7.67px 13.67px;
+  font-size: 13px;
+}
 @media only screen and (max-width: 991px) {
   .container {
     display: flex;

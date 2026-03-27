@@ -1,0 +1,114 @@
+.wrapper {
+  width: 100%;
+  border-bottom: var(--stroke-weight-2, 2px) solid var(--Radial, #04111e);
+  background: radial-gradient(
+    52.25% 143.96% at 50% 0%,
+    rgba(50, 174, 212, 0.48) 0%,
+    rgba(5, 114, 215, 0.29) 50.96%,
+    rgba(2, 8, 15, 0.08) 100%
+  );
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 14px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 722px;
+}
+
+.logo {
+  max-width: 53px;
+  width: 100%;
+  cursor: pointer;
+}
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.navItem {
+  display: flex;
+  padding: 7.667px 15.667px;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 1px solid var(--Border-Color);
+  background: var(--White-4);
+  color: var(--White-75);
+
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.navItem:hover {
+  background: var(
+    --WindowBG_01,
+    linear-gradient(
+      0deg,
+      rgba(126, 126, 126, 0.5) 0%,
+      rgba(255, 255, 255, 0.5) 110.42%
+    )
+  );
+}
+.active {
+  color: var(--Orange);
+}
+/* HAMBURGER */
+.hamburger {
+  display: none;
+}
+.closeButton {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    max-width: 42px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .closeButton {
+    margin-left: auto;
+    display: block;
+  }
+  .closeButton,
+  .hamburger {
+    font-size: 24px;
+    color: var(--Primitive-0);
+    cursor: pointer;
+  }
+  .navItems {
+    max-width: 260px;
+    width: 100%;
+    transform: translateX(calc(200%));
+    right: 0;
+    top: 0px;
+    position: fixed;
+
+    height: 100vh;
+    background: #031b2e;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+    gap: 20px;
+    transition: 0.3s;
+    z-index: 101;
+  }
+  .sidebar {
+    transform: translateX(0);
+  }
+}

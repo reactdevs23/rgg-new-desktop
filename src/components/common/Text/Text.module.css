@@ -138,12 +138,23 @@
 .font600 {
   font-weight: 600;
 }
+@media only screen and (max-width: 1199px) {
+  .xl6 {
+    font-size: 56px;
+  }
+  .xl5 {
+    font-size: 45px;
+  }
+  .xl4 {
+    font-size: 28px;
+  }
+  .xl3 {
+    font-size: 26px;
+  }
+}
 @media only screen and (max-width: 991px) {
   .lg {
     font-size: 18px;
-  }
-  .xl4 {
-    font-size: 32px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -161,10 +172,14 @@
   .xl {
     font-size: 18px;
   }
-  .xl3 {
-    font-size: 28px;
+  .xl2 {
+    font-size: 18px;
   }
+
   .xl4 {
     font-size: 28px;
+  }
+  .xl3 {
+    font-size: 24px;
   }
 }

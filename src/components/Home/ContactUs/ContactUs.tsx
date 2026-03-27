@@ -2,7 +2,7 @@ import { useState, ChangeEvent, FormEvent } from "react";
 import classes from "./ContactUs.module.css";
 import clsx from "clsx";
 import Input from "./Input/Input";
-import { Heading, Text } from "@/components/common";
+import { Button, Heading, Text } from "@/components/common";
 import { logo } from "@/images";
 
 const ContactUs = () => {
@@ -59,6 +59,15 @@ const ContactUs = () => {
               rows={4}
             />
           </div>
+
+          <Button
+            type="submit"
+            onClick={() => {}}
+            mxAuto
+            className={classes.sendButton}
+          >
+            Send
+          </Button>
         </form>
       </div>
 

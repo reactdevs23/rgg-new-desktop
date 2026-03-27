@@ -42,6 +42,11 @@
       rgba(39, 35, 31, 0.4) 98.45%
     )
   );
+  transition: 0.3s;
+}
+.button:hover {
+  transform: translateY(-3px);
+  border: 1px solid var(--Orange);
 }
 .highlight {
   background: var(

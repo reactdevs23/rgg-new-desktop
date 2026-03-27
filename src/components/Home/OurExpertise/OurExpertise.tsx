@@ -1,9 +1,10 @@
 import React from "react";
 import classes from "./OurExpertise.module.css";
-import { logo } from "@/images";
-import { Button, Heading, Text } from "@/components/common";
-import { Link } from "react-scroll";
+
+import { Heading, Text } from "@/components/common";
+
 import clsx from "clsx";
+import HoverStack from "./HoverStack/HoverStack";
 
 const OurExpertise = () => {
   return (
@@ -21,9 +22,7 @@ const OurExpertise = () => {
           solutions instead of hype.
         </Text>
       </div>
-      <div className={classes.imgContainer}>
-        <img src={logo} alt="Why RGG" className={classes.img} />
-      </div>{" "}
+      <HoverStack />
     </section>
   );
 };

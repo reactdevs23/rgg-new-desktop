@@ -36,7 +36,7 @@
     gap: 60px;
   }
 }
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 1199px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -44,9 +44,15 @@
   }
   .infoContainer {
     align-items: center;
+    max-width: 100%;
   }
   .heading,
   .info {
     text-align: center;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .container {
+    padding-top: 20px;
   }
 }

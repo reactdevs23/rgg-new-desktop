@@ -1,0 +1,107 @@
+.wrapper {
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* LOGO */
+.logo {
+  position: absolute;
+  width: 180px;
+  z-index: 20;
+  transform: translateY(0px);
+  transition: 0.4s ease;
+}
+
+.wrapper:hover .logo {
+  transform: translateY(-100px) scale(1.05) skewX(30deg);
+}
+
+/* STACK */
+.stack {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* BASE CARD */
+.card {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+.wrapper .card4 {
+  width: 100px;
+}
+
+/* SHOW ON HOVER */
+.wrapper:hover .card {
+  opacity: 1;
+}
+.card {
+  transform: translateX(0px) translateX(0px) scale(1) skewX(0deg);
+  transition: 0.4s;
+}
+/* ===== STACK WITH SKEW ===== */
+
+/* Depth stacking with translateZ and z-index */
+.wrapper:hover .card0 {
+  transform: translateX(-13%) translateY(120%) translateZ(0px) scale(0.8)
+    skewX(30deg);
+  z-index: 1;
+}
+
+.wrapper:hover .card1 {
+  transform: translateX(30%) translateY(95%) translateZ(20px) scale(0.84)
+    skewX(30deg);
+  z-index: 2;
+}
+
+.wrapper:hover .card2 {
+  transform: translateX(-30%) translateY(55%) translateZ(40px) scale(0.88)
+    skewX(30deg);
+  z-index: 3;
+}
+
+.wrapper:hover .card3 {
+  transform: translateX(13%) translateY(30%) scale(1) skewX(30deg);
+  z-index: 4;
+}
+
+.wrapper:hover .card4 {
+  transform: translateX(30%) translateY(10%) translateZ(80px) scale(0.96)
+    skewX(30deg);
+  width: 43%; /* previously 130px out of 300px */
+  z-index: 5;
+}
+@media only screen and (max-width: 1199px) {
+}
+@media only screen and (max-width: 767px) {
+  .stack {
+    width: 230px;
+    height: 230px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .stack {
+    width: 200px;
+    height: 200px;
+  }
+  .logo {
+    max-width: 150px;
+  }
+}

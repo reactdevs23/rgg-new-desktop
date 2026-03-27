@@ -1,28 +1,6 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  gap: 12px;
-
-  width: 100%;
-
-  margin: 0 auto;
-  width: 100%;
-  position: sticky;
-  position: -webkit-sticky;
-  top: max(84px, env(safe-area-inset-top));
-  top: max(84px, constant(safe-area-inset-top)); /* iOS 11.0 fallback */
-  background: var(--Primitive-950);
-  padding-top: 16px;
-  padding-bottom: 8px;
-  z-index: 100;
-}
-.side {
-  width: 24px;
-  min-width: 24px;
-  max-width: 24px;
-}
-.icon {
-  font-size: 16px;
-  color: var(--Primitive-500);
+  gap: 16px;
 }

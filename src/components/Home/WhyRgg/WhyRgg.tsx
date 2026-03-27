@@ -1,16 +1,14 @@
-import React from "react";
 import classes from "./WhyRgg.module.css";
-import { whyRggImg } from "@/images";
 import { Button, Heading, Text } from "@/components/common";
 import { Link } from "react-scroll";
 import clsx from "clsx";
 
+import OverlappingCards from "./OverlappingCards/OverlappingCards";
+
 const WhyRgg = () => {
   return (
-    <section className={clsx(classes.container, "container")}>
-      <div className={classes.imgContainer} id="why-rgg">
-        <img src={whyRggImg} alt="Why RGG" className={classes.img} />
-      </div>{" "}
+    <section className={clsx(classes.container, "container")} id="why-rgg">
+      <OverlappingCards />
       <div className={classes.infoContainer}>
         <Heading xl6 className={classes.heading}>
           Why RGG
@@ -31,7 +29,6 @@ const WhyRgg = () => {
           duration={500}
           to="contact-us"
         >
-          {" "}
           <Button>Contact Us</Button>
         </Link>
       </div>

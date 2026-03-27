@@ -31,6 +31,15 @@ import Switch from "./Switch/Switch";
 import ErrorFallback from "./ErrorFallback/ErrorFallback";
 import ErrorTest from "./ErrorTest/ErrorTest";
 import Bg from "./Bg/Bg";
+import WhatItIs from "./WhatItIs/WhatItIs";
+import Benefits from "./Benefits/Benefits";
+import BuiltAs from "./BuiltAs/BuiltAs";
+import WhoItsForAndBenefits from "./WhoItsForAndBenefits/WhoItsForAndBenefits";
+import CoreFeatures from "./CoreFeatures/CoreFeatures";
+import Reveal from "@/Reveal/Reveal";
+import ProblemWeSolve from "./ProblemWeSolve/ProblemWeSolve";
+import HowItWorks from "./HowItWorks/HowItWorks";
+import HeroSection from "./HeroSection/HeroSection";
 export {
   InfoContainer,
   ButtonContainer,
@@ -58,4 +67,13 @@ export {
   ErrorFallback,
   ErrorTest,
   Bg,
+  WhatItIs,
+  Benefits,
+  BuiltAs,
+  WhoItsForAndBenefits,
+  CoreFeatures,
+  Reveal,
+  ProblemWeSolve,
+  HowItWorks,
+  HeroSection,
 };
